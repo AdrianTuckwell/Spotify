@@ -24,17 +24,22 @@ var requestComplete = function(){
   var spotify = JSON.parse(jsonString);
   var albums = spotify.albums.items;
   populateList(albums);
-  }
+}
 
 
 var populateList = function(albums){
-  //console.log(albums);
+  console.log(albums);
   var div = document.getElementById('albums');
 
   albums.forEach(function(album){
     var li = document.createElement('li');
     li.innerText = album.name;
     div.appendChild(li);
+
+    var albumImage = document.createElement('img');
+    albumImage.src = album.images[0].url;
+    div.appendChild(albumImage);
+
   });
 }
 
