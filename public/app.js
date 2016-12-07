@@ -32,13 +32,30 @@ var populateList = function(albums){
   var div = document.getElementById('albums');
 
   albums.forEach(function(album){
+    // album title-------------------------------
     var li = document.createElement('li');
     li.innerText = album.name;
     div.appendChild(li);
 
+    // album artist-------------------------------
+    var li = document.createElement('li');
+    li.innerText = album.artists[0].name;
+    div.appendChild(li);
+
+    // album link-------------------------------
+    var albumLink = document.createElement('a');
+    albumLink.innerText = "link";
+    albumLink.href = album.external_urls.spotify;
+    div.appendChild(albumLink);
+
+    // album image-------------------------------
     var albumImage = document.createElement('img');
-    albumImage.src = album.images[0].url;
+    albumImage.src = album.images[1].url;
     div.appendChild(albumImage);
+
+    
+
+
 
   });
 }
