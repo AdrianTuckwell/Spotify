@@ -1,5 +1,5 @@
 var app = function(){
-  var url = 'https://api.spotify.com/v1/search?q=christmas&type=album';
+  var url = 'https://api.spotify.com/v1/search?q=kylie&type=album';
   makeRequest(url, requestComplete);
 
 }
@@ -52,10 +52,6 @@ var populateList = function(albums){
     var albumImage = document.createElement('img');
     albumImage.src = album.images[1].url;
     div.appendChild(albumImage);
-
-    
-
-
 
   });
 }
