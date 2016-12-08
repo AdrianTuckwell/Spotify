@@ -1,6 +1,7 @@
 main{
-  width: 300px;
+  width: 400px;
   margin: 0 auto;
+  background: red;
 }
 
 input{
@@ -13,5 +14,27 @@ input{
 
 .album{
   padding: 5px;
+}
+
+h3{
+  color: white;
+  font-family: "Twiddlestix";
+  padding: 10px;
+}
+
+li{
+  color: white;
+  font-family: "Twiddlestix";
+  padding: 10px;
+}
+
+a{
+  padding: 10px;
+  font-family: "Twiddlestix";
+  color: white
+}
+
+img{
+  padding: 20px;
 }
 
